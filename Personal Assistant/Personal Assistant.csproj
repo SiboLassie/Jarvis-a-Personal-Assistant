@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECB44BD7-D02C-4E4F-954A-15DE75CFF1E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Personal_Assistant</RootNamespace>
+    <AssemblyName>Personal Assistant</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.45.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3, Version=1.45.0.1928, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Calendar.v3.1.45.0.1928\lib\net45\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.45.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.45.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.17.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.17\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="credentials.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="images\JarvisIcons\wiki-icon.png" />
+    <None Include="images\settBG.gif" />
+    <None Include="images\settings-BG.gif" />
+    <None Include="images\settingBG.gif" />
+    <None Include="images\settingsBG.gif" />
+    <None Include="images\brainBG.jpg" />
+    <None Include="images\brain.gif" />
+    <None Include="images\brainLogoM.png" />
+    <Content Include="images\ExtraIcons\media-btnfastfarword.png" />
+    <Content Include="images\ExtraIcons\media-btnfastreverse.png" />
+    <Content Include="images\ExtraIcons\media-btnpause.png" />
+    <Content Include="images\ExtraIcons\media-btnplay.png" />
+    <Content Include="images\ExtraIcons\media-btnprevous.png" />
+    <Content Include="images\ExtraIcons\media-btnstop.png" />
+    <Content Include="images\ExtraIcons\media-next.png" />
+    <Content Include="images\ExtraIcons\mediaplayeraddplaylist.png" />
+    <Content Include="images\ExtraIcons\mediaplayerfullscreen.png" />
+    <Content Include="images\ExtraIcons\mediaplayervolumedown.png" />
+    <Content Include="images\ExtraIcons\mediaplayervolumeupp.png" />
+    <None Include="images\menuBG.gif" />
+    <None Include="images\JarvisIcons\world-clock-icon.png" />
+    <None Include="images\weatherIcons\weather-bg.jpg" />
+    <None Include="images\JarvisIcons\web-search-icon.png" />
+    <None Include="images\weatherIcons\storm.gif" />
+    <None Include="images\weatherIcons\snow_with_rain.gif" />
+    <None Include="images\weatherIcons\snow.gif" />
+    <None Include="images\weatherIcons\raining.gif" />
+    <None Include="images\weatherIcons\lightning.gif" />
+    <None Include="images\weatherIcons\hail.gif" />
+    <None Include="images\weatherIcons\cloudy.gif" />
+    <None Include="images\weatherIcons\partly_cloudy.gif" />
+    <None Include="images\weatherIcons\partly_cloudy_with_rain.gif" />
+    <None Include="images\weatherIcons\sunset.png" />
+    <None Include="images\weatherIcons\sunrise.png" />
+    <None Include="images\weatherIcons\output-onlinepngtools%281%29.jpg" />
+    <None Include="images\weatherIcons\sunny.gif" />
+    <None Include="images\jarvis-4.gif" />
+    <None Include="images\jarvis.gif" />
+    <None Include="images\homeBG.gif" />
+    <None Include="images\jarvisH.gif" />
+    <None Include="images\jarvisHome.gif" />
+    <None Include="images\JarvisIcons\alarm_icon.png" />
+    <None Include="images\JarvisIcons\calendar_icon.png" />
+    <None Include="images\jarvis-brain.gif" />
+    <None Include="images\JarvisIcons\alarm-icon.png" />
+    <None Include="images\JarvisIcons\alarmClockIcon.png" />
+    <None Include="images\JarvisIcons\australia.png" />
+    <None Include="images\JarvisIcons\addAppointment-icon.png" />
+    <None Include="images\JarvisIcons\calendarSet-icon.png" />
+    <None Include="images\JarvisIcons\betaMode-icon.png" />
+    <Content Include="images\JarvisIcons\check-update-bg.png" />
+    <Content Include="images\JarvisIcons\close-icon.png" />
+    <None Include="images\JarvisIcons\commands-icon.png" />
+    <Content Include="images\JarvisIcons\connected-devoices-bg.png" />
+    <Content Include="images\JarvisIcons\database.png" />
+    <None Include="images\JarvisIcons\dateTime-icon.png" />
+    <None Include="images\JarvisIcons\deleteAppointment-icon.png" />
+    <None Include="images\JarvisIcons\editLine-icon.png" />
+    <Content Include="images\JarvisIcons\email-bg-img.png" />
+    <Content Include="images\JarvisIcons\email-ico.png" />
+    <Content Include="images\JarvisIcons\email-icon.png" />
+    <Content Include="images\JarvisIcons\email-icon2.png" />
+    <Content Include="images\JarvisIcons\email-reader-icon.png" />
+    <None Include="images\JarvisIcons\emailInfo-icon.png" />
+    <Content Include="images\JarvisIcons\email_bg_ing.png" />
+    <None Include="images\JarvisIcons\email_icon.png" />
+    <Content Include="images\JarvisIcons\full-screen-icon.png" />
+    <None Include="images\JarvisIcons\GCalendar-icon.png" />
+    <Content Include="images\JarvisIcons\gear.png" />
+    <None Include="images\JarvisIcons\get-bing-news-icon.png" />
+    <None Include="images\JarvisIcons\get-google-news-icon.png" />
+    <None Include="images\JarvisIcons\israel.png" />
+    <None Include="images\JarvisIcons\japan.png" />
+    <None Include="images\JarvisIcons\jerusalem.png" />
+    <None Include="images\JarvisIcons\location-icon.png" />
+    <None Include="images\JarvisIcons\location_icon.png" />
+    <None Include="images\JarvisIcons\locationInfo-icon.png" />
+    <None Include="images\JarvisIcons\lock-icon.png" />
+    <None Include="images\JarvisIcons\leftSideMenu-icon.png" />
+    <None Include="images\JarvisIcons\green-icon.png" />
+    <Content Include="images\JarvisIcons\logo-bg.png" />
+    <None Include="images\JarvisIcons\london.png" />
+    <Content Include="images\JarvisIcons\maximize-icon.png" />
+    <Content Include="images\JarvisIcons\media-bg.png" />
+    <Content Include="images\JarvisIcons\media-icon.png" />
+    <Content Include="images\JarvisIcons\mediaplayer-icon.png" />
+    <None Include="images\JarvisIcons\media_icon.png" />
+    <None Include="images\JarvisIcons\minimiz-icon.png" />
+    <Content Include="images\JarvisIcons\minimize-icon.png" />
+    <None Include="images\JarvisIcons\modifyAppointment-icon.png" />
+    <Content Include="images\JarvisIcons\new-reader-icon.png" />
+    <Content Include="images\JarvisIcons\news-bg.png" />
+    <Content Include="images\JarvisIcons\news-icon.png" />
+    <None Include="images\JarvisIcons\pause-read-icon.png" />
+    <None Include="images\JarvisIcons\open-read-file-icon.png" />
+    <None Include="images\JarvisIcons\news_icon.png" />
+    <None Include="images\JarvisIcons\newyork.png" />
+    <None Include="images\JarvisIcons\note-icon.png" />
+    <None Include="images\JarvisIcons\nextMonth-icon.png" />
+    <None Include="images\JarvisIcons\preMonth-icon.png" />
+    <None Include="images\JarvisIcons\notice-icon.png" />
+    <Content Include="images\JarvisIcons\profile-bg.png" />
+    <None Include="images\JarvisIcons\read-icon.png" />
+    <None Include="images\JarvisIcons\read-news-icon.png" />
+    <None Include="images\JarvisIcons\read-search-icon.png" />
+    <None Include="images\JarvisIcons\red-icon.png" />
+    <Content Include="images\JarvisIcons\restore-database-bg.png" />
+    <None Include="images\JarvisIcons\search-icon.png" />
+    <None Include="images\JarvisIcons\return-icon.png" />
+    <None Include="images\JarvisIcons\saveAppointment-icon.png" />
+    <None Include="images\JarvisIcons\rightSideMenu-icon.png" />
+    <Content Include="images\JarvisIcons\search-key-bg.png" />
+    <Content Include="images\JarvisIcons\search-web-icon.png" />
+    <None Include="images\JarvisIcons\search_icon.png" />
+    <Content Include="images\JarvisIcons\select-voice-bg.png" />
+    <None Include="images\JarvisIcons\settings_icon.png" />
+    <None Include="images\JarvisIcons\shut-down-icon.png" />
+    <None Include="images\JarvisIcons\shutdown-icon.png" />
+    <Content Include="images\JarvisIcons\social-network-bg.png" />
+    <Content Include="images\JarvisIcons\speech-engine-bg.png" />
+    <None Include="images\JarvisIcons\stop-read-icon.png" />
+    <None Include="images\JarvisIcons\sydney.png" />
+    <Content Include="images\JarvisIcons\text-reader-icon.png" />
+    <None Include="images\JarvisIcons\text_icon.png" />
+    <None Include="images\JarvisIcons\timer-icon.png" />
+    <None Include="images\JarvisIcons\title-icon.png" />
+    <None Include="images\JarvisIcons\time-icon.png" />
+    <None Include="images\JarvisIcons\title_icon.png" />
+    <None Include="images\JarvisIcons\titleIcon.png" />
+    <Content Include="images\JarvisIcons\toggle-menu-btn.png" />
+    <None Include="images\JarvisIcons\united-states.png" />
+    <None Include="images\JarvisIcons\united-kingdom.png" />
+    <None Include="images\JarvisIcons\tokyo.png" />
+    <None Include="images\JarvisIcons\userInfo-icon.png" />
+    <None Include="images\JarvisIcons\unlock-icon.png" />
+    <Content Include="images\JarvisIcons\username-bg.png" />
+    <None Include="images\JarvisIcons\voice-on-icon.png" />
+    <Content Include="images\JarvisIcons\weather-bg.png" />
+    <Content Include="images\JarvisIcons\weather-icon.png" />
+    <None Include="images\JarvisIcons\weather_icon.png" />
+    <Content Include="images\JarvisIcons\web-compiler-bg.png" />
+    <Content Include="images\JarvisIcons\web-reader-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
