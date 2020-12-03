@@ -4,7 +4,7 @@ Jarvis, a Virtual Personal Assistant platform to perform daily tasks on behalf o
 <img src = "Readme-Imgs/11.jpg">
 
 # About:
-The system is built in a way that allows easy and intuitive functionality for the user, to provide the service of a personal assistant that presents a convenient and friendly interface with easy and natural operation, for the efficient and fast execution of daily tasks.
+The system is built in a way that allows easy and intuitive functionality for the user, to provide the service of a personal assistant that presents a convenient and friendly interface with easy and natural operation, for efficient and fast execution of daily tasks.
 
 
 The system can provide a wide range of services for the user, including: 
@@ -23,7 +23,7 @@ The system can provide a wide range of services for the user, including:
 
 # Technical:
   System architecture combines event-driven programming with procedural programming.
-  Built based on Windows os in Visual Studio .NET environment,
+  Built based on Windows OS in Visual Studio .NET environment,
   In development - Windows Forms Application, C#.
 
   * ML Build-in Libraries - Using NuGet to obtain machine learning tools and libraries.
