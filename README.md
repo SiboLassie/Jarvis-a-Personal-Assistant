@@ -1,5 +1,5 @@
 # Jarvis-a-Personal-Assistant
-Jarvis, a Virtual Personal Assistant platform to perform actions on behalf of the user, By using data and Internet services, controlled by voice or manual commands.
+Jarvis, a Virtual Personal Assistant platform to perform daily tasks on behalf of the user, By using data and Internet services, controlled by voice or manual commands.
 
 <img src = "Readme-Imgs/11.jpg">
 
