@@ -8,7 +8,7 @@ The system is built in a way that allows easy and intuitive functionality for th
 
 
 The system can provide a wide range of services for the user, including: 
-  - System can connect to the e-mail account to view and read emails, ( * More info to connect Email Account on Settings Page)
+  - Connect to the e-mail account to view and read emails, ( * More info to connect Email Account on Settings Page)
   - View and read the weather forecast, ( * Set the Location on Settings Page)
   - View and read Text files directly from the user drive,
   - Update the user on the time and date news by location,
